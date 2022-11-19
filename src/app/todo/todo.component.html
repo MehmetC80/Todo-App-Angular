@@ -1,0 +1,14 @@
+<div
+  class="flex justify-between py-2 px-4 border-2 border-white items-center"
+  [ngClass]="{ 'bg-green-800': todo.done, 'bg-red-800': !todo.done }"
+>
+  <p class="cursor-pointer" (click)="toggleTodo()">{{ todo.todo }}</p>
+
+  <button
+    class="hover:scale-110 transition-all duration-300"
+    [ngClass]="{ 'text-red-800': todo.done, 'text-gray-900': !todo.done }"
+    (click)="deleteTodo()"
+  >
+    X
+  </button>
+</div>
