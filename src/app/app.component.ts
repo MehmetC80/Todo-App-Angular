@@ -45,6 +45,7 @@ export class AppComponent implements OnInit {
   addTodo() {
     if (this.newTodo.trim() !== '') {
       this.todos.push({ todo: this.newTodo, done: false });
+      
     }
     this.storeTodos();
   }
